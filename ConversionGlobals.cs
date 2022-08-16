@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 
 public static class Globals
 {
-    // Dominator.cpp: определяет точку входа для консольного приложения.
     //Из массива Х(N) все отрицательные элементы записать в массив Z(m). Удалить в каждом массиве первый элемент.
 
     internal static void Main()
