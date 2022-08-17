@@ -6,7 +6,7 @@
             int[] ZArr = new int[100];
             Console.WriteLine("Количество элементов массива:");
             int Numb = int.Parse(Console.ReadLine());
-            Console.Write("Массив X\n");
+            Console.WriteLine("Массив X");
             int length;
             for (length = 0; length < Numb; length++)
             {
