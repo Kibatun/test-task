@@ -16,14 +16,10 @@ public static class Globals
         {
             arr[amount] = int.Parse(Console.ReadLine());
         }
-        int max;
-        int min;
-        int nmax;
-        int nmin;
-        max = arr[0];
-        nmax = 0;
-        min = arr[0];
-        nmin = 0;
+        int max = arr[0];
+        int min = arr[0];
+        int nmax = 0;
+        int nmin = nmin = 0;
 
         for (amount = 1; amount < numb; amount++)
         {
