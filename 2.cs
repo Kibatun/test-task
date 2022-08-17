@@ -29,15 +29,15 @@ public static class Globals
                 }
             }
         }
-        int gol = 0;
-        double gil = 0F;
+        int sum = 0;
+        double ArithMed = 0F;
         for (length = 0; length < 3; length++)
         {
             for (height = 0; height < 5; height++)
             {
-                gol += TwoDimArr[length][height];
+                sum += TwoDimArr[length][height];
             }
         }
-        gil = gol / 15.0;
-        Console.Write("Среднее арифметическое= {0:f2}", gil);
+        ArithMed = sum / 15.0;
+        Console.Write("Среднее арифметическое= {0:f2}", ArithMed);
         Console.ReadKey(true);
