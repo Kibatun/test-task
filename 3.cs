@@ -5,12 +5,11 @@ public static class Globals
     //В массиве X=(x1,x2,…,xn) определить минимальный и максимальный элементы. Не упорядочивая массив, удалить из него элементы,
     //расположенные между максимальным и минимальным. 
     //
-    internal static void Main()
+     internal static void Main()
     {
-        int[] X = new int[100];
-        int i;
-        int n;
-        int j;
+        int[] arr = new int[100];
+        int amount;
+        int dig;
         int max;
         int min;
         int nmax;
@@ -18,38 +17,38 @@ public static class Globals
         Console.Write("Введите количество элементов\n");
         int numb = int.Parse(Console.ReadLine());
         Console.Write("Введите массив X\n");
-        for (i = 0; i < numb; i++)
+        for (amount = 0; amount < numb; amount++)
         {
-            X[i] = int.Parse(Console.ReadLine());
+            arr[amount] = int.Parse(Console.ReadLine());
         }
-        max = X[0];
+        max = arr[0];
         nmax = 0;
-        min = X[0];
+        min = arr[0];
         nmin = 0;
 
-        for (i = 1; i < numb; i++)
+        for (amount = 1; amount < numb; amount++)
         {
-            if (X[i] > max)
+            if (arr[amount] > max)
             {
-                max = X[i];
-                nmax = i;
+                max = arr[amount];
+                nmax = amount;
             }
         }
 
-        for (i = 1; i < numb; i++)
+        for (amount = 1; amount < numb; amount++)
         {
-            if (X[i] < min)
+            if (arr[amount] < min)
             {
-                min = X[i];
-                nmin = i;
+                min = arr[amount];
+                nmin = amount;
             }
         }
 
-        for (j = 1; j <= nmax - nmin - 1; j++)
+        for (dig = 1; dig <= nmax - nmin - 1; dig++)
         {
-            for (i = nmin + 1; i <= numb - 2; i++)
+            for (amount = nmin + 1; amount <= numb - 2; amount++)
             {
-                X[i] = X[i + 1];
+                arr[amount] = arr[amount + 1];
             }
             numb--;
         }
@@ -60,12 +59,11 @@ public static class Globals
         Console.Write(max);
         Console.Write("\n");
         Console.Write("Результирующий массив X\n");
-        for (i = 0; i < numb; i++)
+        for (amount = 0; amount < numb; amount++)
         {
-            Console.Write(X[i]);
+            Console.Write(arr[amount]);
             Console.Write("\t");
         }
         Console.Write("\n");
         Console.ReadKey(true);
     }
-}
