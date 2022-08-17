@@ -6,9 +6,9 @@ public static class Globals
     //вычисляет среднее арифметическое его элементов.
     //
 
-     internal static void Main()
+    internal static void Main()
     {
-        int[][] x =
+        int[][] TwoDimArr =
         {
             new int[5],
             new int[5],
@@ -25,7 +25,7 @@ public static class Globals
                 string tempVar = Console.ReadLine();
                 if (tempVar != null)
                 {
-                    x[length][height] = int.Parse(tempVar);
+                    TwoDimArr[length][height] = int.Parse(tempVar);
                 }
             }
         }
@@ -37,7 +37,7 @@ public static class Globals
         {
             for (height = 0; height < 5; height++)
             {
-                str += x[length][height];
+                str += TwoDimArr[length][height];
             }
         }
         str1 = str / 15.0;
