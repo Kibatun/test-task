@@ -16,7 +16,7 @@ public static class Globals
         int nmin;
         Console.Write("Введите количество элементов\n");
         int numb = int.Parse(Console.ReadLine());
-        Console.Write("Введите массив X\n");
+        Console.WriteLine("Введите массив X");
         for (amount = 0; amount < numb; amount++)
         {
             arr[amount] = int.Parse(Console.ReadLine());
@@ -54,16 +54,16 @@ public static class Globals
         }
         Console.Write("min=");
         Console.Write(min);
-        Console.Write("\n");
+        Console.WriteLine(" ");
         Console.Write("max=");
         Console.Write(max);
-        Console.Write("\n");
-        Console.Write("Результирующий массив X\n");
+        Console.WriteLine(" ");
+        Console.WriteLine("Результирующий массив X");
         for (amount = 0; amount < numb; amount++)
         {
             Console.Write(arr[amount]);
             Console.Write("\t");
         }
-        Console.Write("\n");
+        Console.WriteLine(" ");
         Console.ReadKey(true);
     }
