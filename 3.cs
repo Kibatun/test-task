@@ -7,19 +7,27 @@ public static class Globals
     //
     internal static void Main()
     {
-        int[] arr = new int[100];     
+        Table();
+    }
+    public static void Table()
+    { 
+        int[] arr = new int[100];
+        int amount;        
         Console.WriteLine("Введите количество элементов");
         int numb = int.Parse(Console.ReadLine());
         Console.WriteLine("Введите массив X");
-        int amount
         for (amount = 0; amount < numb; amount++)
         {
             arr[amount] = int.Parse(Console.ReadLine());
         }
-        int max = arr[0];
-        int min = arr[0];
-        int nmax = 0;
-        int nmin = nmin = 0;
+        int max;
+        int min;
+        int nmax;
+        int nmin;
+        max = arr[0];
+        nmax = 0;
+        min = arr[0];
+        nmin = 0;
 
         for (amount = 1; amount < numb; amount++)
         {
@@ -62,3 +70,4 @@ public static class Globals
         Console.WriteLine(" ");
         Console.ReadKey(true);
     }
+}
