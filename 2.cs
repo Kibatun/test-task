@@ -6,7 +6,7 @@ public static class Globals
     //вычисляет среднее арифметическое его элементов.
     //
 
-    internal static void Main()
+     internal static void Main()
     {
         int[][] x =
         {
@@ -14,33 +14,34 @@ public static class Globals
             new int[5],
             new int[5]
         };
-        int i;
-        int j;
-        int s;
-        double s1;
-        s = 0;
-        s1 = 0F;
-        Console.Write("Введите массив X: \n");
-        for (i = 0; i < 3; i++)
+
+        Console.WriteLine("Введите массив X:");
+        int length;
+        int height;
+        for (length = 0; length < 3; length++)
         {
-            for (j = 0; j < 5; j++)
+            for (height = 0; height < 5; height++)
             {
                 string tempVar = Console.ReadLine();
                 if (tempVar != null)
                 {
-                    x[i][j] = int.Parse(tempVar);
+                    x[length][height] = int.Parse(tempVar);
                 }
             }
         }
-        for (i = 0; i < 3; i++)
+        int str;
+        double str1;
+        str = 0;
+        str1 = 0F;
+        for (length = 0; length < 3; length++)
         {
-            for (j = 0; j < 5; j++)
+            for (height = 0; height < 5; height++)
             {
-                s += x[i][j];
+                str += x[length][height];
             }
         }
-        s1 = s / 15.0;
-        Console.Write("Среднее арифметическое= {0:f2}", s1);
+        str1 = str / 15.0;
+        Console.Write("Среднее арифметическое= {0:f2}", str1);
         Console.ReadKey(true);
     }
 }
