@@ -9,16 +9,17 @@ public static class Globals
 
     internal static void Main()
     {
-        
+        int cons;
         Console.WriteLine("+-----------------------------------+");
         Console.WriteLine("x,grad|x,rad| y1(x) | y2(x) | y3(x) |");
         Console.WriteLine("+-----------------------------------+");
-    }
-        public static void Table(int cons, int grad, double rad, double y1, double y2, double y3)
-    { 
         for (cons = 0; cons <= 18; cons++)
         {
-           
+            int grad;
+            double rad;
+            double y1;
+            double y2;
+            double y3;
             double pi = 3.14159265F;
             grad = cons * 20;
             rad = grad * pi / 180;
