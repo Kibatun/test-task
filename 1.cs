@@ -8,13 +8,18 @@ public static class Globals
     //
 
     internal static void Main()
-    {
-        int cons;
+    {  
         Console.WriteLine("+-----------------------------------+");
         Console.WriteLine("x,grad|x,rad| y1(x) | y2(x) | y3(x) |");
         Console.WriteLine("+-----------------------------------+");
+        Table();
+    }
+        public static void Table()
+    {
+        int cons;
         for (cons = 0; cons <= 18; cons++)
         {
+            
             int grad;
             double rad;
             double y1;
@@ -31,6 +36,4 @@ public static class Globals
         Console.WriteLine("+-----------------------------------+");
         Console.ReadKey(true);
     }
-
-
 }
