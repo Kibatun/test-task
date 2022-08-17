@@ -8,13 +8,16 @@ public static class Globals
 
     internal static void Main()
     {
+        Table();
+    }
+    public static void Table()
+    {
         int[][] TwoDimArr =
-        {
+       {
             new int[5],
             new int[5],
             new int[5]
         };
-
         Console.WriteLine("Введите массив X:");
         int length;
         int height;
@@ -30,7 +33,7 @@ public static class Globals
             }
         }
         int sum = 0;
-        double ArithMed = 0F;
+        double ArithmAver = 0F;
         for (length = 0; length < 3; length++)
         {
             for (height = 0; height < 5; height++)
@@ -38,6 +41,8 @@ public static class Globals
                 sum += TwoDimArr[length][height];
             }
         }
-        ArithMed = sum / 15.0;
-        Console.Write("Среднее арифметическое= {0:f2}", ArithMed);
+        ArithmAver = sum / 15.0;
+        Console.Write("Среднее арифметическое= {0:f2}", ArithmAver);
         Console.ReadKey(true);
+    }
+}
