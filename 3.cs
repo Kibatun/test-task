@@ -7,11 +7,11 @@ public static class Globals
     //
     internal static void Main()
     {
-        int[] arr = new int[100];
-        int amount;        
+        int[] arr = new int[100];     
         Console.WriteLine("Введите количество элементов");
         int numb = int.Parse(Console.ReadLine());
         Console.WriteLine("Введите массив X");
+        int amount
         for (amount = 0; amount < numb; amount++)
         {
             arr[amount] = int.Parse(Console.ReadLine());
