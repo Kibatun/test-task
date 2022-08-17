@@ -1,64 +1,56 @@
-using System;
-
-public static class Globals
-{
-    //Из массива Х(N) все отрицательные элементы записать в массив Z(m).
-    //Удалить в каждом массиве первый элемент.
-    //
-
-    internal static void Main()
-    {
-        int i;
-        int N;
-        int m;
-        int[] X = new int[100];
-        int[] Z = new int[100];
-        Console.WriteLine("Количество элементов массива:");
-        int Numb = int.Parse(Console.ReadLine());
-        Console.Write("Массив X\n");
-        for (i = 0; i < Numb; i++)
+        internal static void Main()
         {
-            X[i] = int.Parse(Console.ReadLine());
-        }
-        m = 0;
-        for (i = 0; i < Numb; i++)
-        {
-            if (X[i] < 0)
+
+
+            int[] XArr = new int[100];
+            int[] ZArr = new int[100];
+            Console.WriteLine("Количество элементов массива:");
+            int Numb = int.Parse(Console.ReadLine());
+            Console.Write("Массив X\n");
+            int length;
+            for (length = 0; length < Numb; length++)
             {
-                Z[m++] = X[i];
+                XArr[length] = int.Parse(Console.ReadLine());
             }
-        }
-        Console.WriteLine("Массив Z:");
-        for (i = 0; i < m; i++)
-        {
-            Console.Write(Z[i]);
-            Console.Write(" ");
-        }
-        Console.Write("\n");
-        for (i = 1; i < Numb - 1; i++)
-        {
-            X[i] = X[i + 1];
-        }
-        Numb--;
-        Console.WriteLine("Результирующий массив Х");
-        for (i = 0; i < Numb; i++)
-        {
-            Console.Write(X[i]);
-            Console.Write(" ");
-        }
-        Console.WriteLine(" ");
-        for (i = 1; i < m - 1; i++)
-        {
-            Z[i] = Z[i + 1];
-        }
-        m--;
-        Console.WriteLine("Результирующий массив Z");
-        for (i = 0; i < m; i++)
-        {
-            Console.Write(Z[i]);
-            Console.Write(" ");
-        }
-        Console.WriteLine(" ");
+            int mass  = 0;
+            for (length = 0; length < Numb; length++)
+            {
+                if (XArr[length] < 0)
+                {
+                    ZArr[mass++] = XArr[length];
+                }
+            }
+            Console.WriteLine("Массив Z:");
+            for (length = 0; length < mass; length++)
+            {
+                Console.Write(ZArr[length]);
+                Console.Write(" ");
+            }
+            Console.WriteLine(" ");
+            for (length = 1; length < Numb - 1; length++)
+            {
+                XArr[length] = XArr[length + 1];
+            }
+            Numb--;
+            Console.WriteLine("Результирующий массив Х");
+            for (length = 0; length < Numb; length++)
+            {
+                Console.Write(XArr[length]);
+                Console.Write(" ");
+            }
+            Console.WriteLine(" ");
+            for (length = 1; length < mass - 1; length++)
+            {
+                ZArr[length] = ZArr[length + 1];
+            }
+            mass--;
+            Console.WriteLine("Результирующий массив Z");
+            for (length = 0; length < mass; length++)
+            {
+                Console.Write(ZArr[length]);
+                Console.Write(" ");
+            }
+            Console.WriteLine(" ");
 
+        }
     }
-}
